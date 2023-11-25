@@ -1,15 +1,10 @@
-import Profile from "./Profile";
-import ListGroup from "./components/ListGroup";
-import FindPage from "./FindPage";
-import RightBar from "./components/RightBar";
-import SearchGroup from "./components/SearchGroup";
 import { Grid, Box, Toolbar, Container, Paper, Stack } from "@mui/material";
-import "./App.css";
+import Profile from "./Profile";
+import Task from "./Task";
 
-function App() {
+function RightBar() {
   return (
     <>
-      <FindPage />
       <Box
         component="main"
         sx={{
@@ -22,27 +17,41 @@ function App() {
           overflow: "auto",
         }}
       >
-        <Container maxWidth="xl" sx={{ mt: 2, mb: 4 }}>
+        <Container maxWidth="lg" sx={{}}>
           <Grid
             container
             spacing={3}
-            direction={"row"}
+            direction={"column"}
             justifyContent="center"
             alignItems="stretch"
           >
-            <Grid item xs={12} md={9}>
+            {/* Chart */}
+            <Grid item xs={8} md={8}>
               <Paper
                 sx={{
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: 775,
+                  height: 275,
                 }}
-              ></Paper>
+              >
+                <Profile></Profile>
+              </Paper>
             </Grid>
-            <Grid item xs={12} md={3}>
-              <RightBar />
+            {/* Recent Deposits */}
+            <Grid item xs={8} md={8}>
+              <Paper
+                sx={{
+                  p: 2,
+                  isplay: "flex",
+                  flexDirection: "column",
+                  height: 475,
+                }}
+              >
+                <Task></Task>
+              </Paper>
             </Grid>
+            {/* Recent Orders */}
           </Grid>
         </Container>
       </Box>
@@ -50,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default RightBar;
