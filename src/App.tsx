@@ -1,12 +1,27 @@
 import Profile from "./Profile";
 import ListGroup from "./components/ListGroup";
+import MainPage from "./components/mainPage";
+import SearchGroup from "./components/SearchGroup";
+import './App.css';
+
 
 function App() {
-  const publicGroups = ["Study session", "Tennis Club", "Swimming Club"];
   return (
+  <> 
     <div>
-      <ListGroup publicGroups={publicGroups} heading="Groups you would like!" />
+      <MainPage/>
     </div>
+
+    <div>
+      <SearchGroup/>
+    </div>
+
+    <div>
+      <ListGroup/>
+    </div>
+  
+  </>
+  
   );
 }
 
