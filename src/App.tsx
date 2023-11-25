@@ -1,60 +1,22 @@
-<<<<<<< HEAD
-//가장 상위 페이지
-
-import {useState} from 'react';
-import './App.css';
-
-import SearchGroup from "./components/SearchGroup";
 import Profile from "./components/Profile";
-import ListGroup from "./components/ListGroup";
-import YourCurrentGroup from "./components/YourCurrentGroup";
-
-
-=======
-import Profile from "./Profile";
-import ListGroup from "./components/ListGroup";
+import ListGroup from "./page-components/ListGroup";
 import FindPage from "./FindPage";
 import RightBar from "./components/RightBar";
-import SearchGroup from "./components/SearchGroup";
+import SearchGroup from "./page-components/SearchGroup";
+import { Routes, Route } from "react-router-dom";
 import { Grid, Box, Toolbar, Container, Paper, Stack } from "@mui/material";
 import "./App.css";
->>>>>>> 0394c9c9c7a616c36623d6077ead3e1f94e287f5
 
 function App() {
-  const [mode, setMode] = useState('ListGroup');
-  
-  let content = null;
-  if(mode === 'FindGroups'){
-    content = <div><ListGroup/></div>
-  } 
-  else if(mode === 'YourCurrentGroups'){
-    content = <div><YourCurrentGroup/></div>
-  } 
-  else if(mode === 'Profile'){
-    content = <div><Profile/></div>
-  } 
-  
   return (
-<<<<<<< HEAD
-  <> 
-    <div style = {{display : 'flex'}}>
-        <h1>소모임</h1>
-				<p><a onClick={(event) => {setMode('FindGroups')}}>Find Groups</a></p>
-				<p><a onClick={(event) => {setMode('YourCurrentGroups')}}>__Your Current Group</a></p>
-        <p><a onClick={(event) => {setMode('Profile')}}>__Profile</a></p>        
-    </div>    
-
-    <div>
-      {content}
-    </div>
-    
-  
-  </>
-
-  
-  
-=======
     <>
+      <Routes>
+        <Route path="/find-group" element="" />
+        <Route path="/your-group" element="" />
+        <Route path="/notifications" element="" />
+        <Route path="/profile" element="" />
+      </Routes>
+
       <FindPage />
       <Box
         component="main"
@@ -93,7 +55,6 @@ function App() {
         </Container>
       </Box>
     </>
->>>>>>> 0394c9c9c7a616c36623d6077ead3e1f94e287f5
   );
 }
 

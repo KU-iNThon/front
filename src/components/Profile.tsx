@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-//Profile
 
-function Profile(){
-    return(
-    <h4>Profile</h4>
-    );
-}
-
-export default Profile;
-=======
 import {
   CardHeader,
   Divider,
@@ -62,4 +52,3 @@ function Profile() {
 }
 
 export default Profile;
->>>>>>> 0394c9c9c7a616c36623d6077ead3e1f94e287f5

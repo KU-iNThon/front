@@ -6,6 +6,8 @@ import {
   Stack,
   Button,
 } from "@mui/material";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -27,16 +29,16 @@ export default function Navbar() {
         </Typography>
         <Stack direction="row" spacing="2">
           <a href="" className="link">
-            Find Group
+            <NavLink to="/find-group">Find Group</NavLink>
           </a>
           <a href="" className="link">
-            Your Group
+            <NavLink to="/your-group">Your Group</NavLink>
           </a>
           <a href="" className="link">
-            Notification
+            <NavLink to="/notifications">Notifications</NavLink>
           </a>
           <a href="" className="link">
-            Profile
+            <NavLink to="/profile">Profile</NavLink>
           </a>
         </Stack>
       </Toolbar>
