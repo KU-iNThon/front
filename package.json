@@ -9,10 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.6",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "recharts": "^2.10.1"
+=======
+    "styled-components": "^6.1.1"
+>>>>>>> 0394c9c9c7a616c36623d6077ead3e1f94e287f5
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
