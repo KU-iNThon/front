@@ -1,27 +1,29 @@
-interface Props {
-  publicGroups: string[];
-  heading: string;
-}
+//Find Groups
 
+import SearchGroup from "./SearchGroup";
 
 let heading = "groups you may enjoy"
 
 //그룹의 이름과 설명
 const Groups = [
-  {id:1, name:'study Group 1', discription:'we are '},
-  {id:2, name:'study Group 2', discription:'KU '},
-  {id:3, name:'study Group 3', discription:'Students '}
+  {"id": 1, "title": "title1", "description": "description1", "room_name": "room_name1", people:10, location:"Anam"},
+	{"id": 2, "title": "title2", "description": "description2", "room_name": "room_name2", people:20, location:"Sinchon"}
 ]
 
 import { MouseEvent } from "react";
 
 function ListGroup() {
+  <div>
+    <SearchGroup/>
+  </div>
+  
   let selectedIndex = -1;
   
   //Event handler
   const handleClick = (event: MouseEvent) => console.log(event);
   return (
     <>
+      <div><SearchGroup/></div>
       <h1>{heading}</h1>
       <div style = {{display: 'flex'}}>
         <p style = {{marginLeft: '10px', fontSize : '20px'}}>Best Match</p>
@@ -38,9 +40,11 @@ function ListGroup() {
             key={Groups.id}
             onClick={handleClick}
           >
-            <h3>{Groups.name}</h3>
+            <h3>{Groups.room_name}</h3>
             <div>
-              <p>{Groups.discription}</p> 
+              <p>{Groups.description}</p>
+              <p>{Groups.people} Actie Users</p>
+              <p>location : {Groups.location}</p>
               <button >Join here!</button>
             </div>
           </li>
