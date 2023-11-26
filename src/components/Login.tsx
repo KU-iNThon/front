@@ -42,6 +42,8 @@ export default function SingIn() {
       email: data.get("email"),
       password: data.get("password"),
     });
+    fetch("http://211.253.28.53:5555/user/login?" + "id=" + data.get("email") + "&pw=" + data.get("password"))
+      .then((response) => response.json());
   };
 
   return (
