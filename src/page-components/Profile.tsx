@@ -1,7 +1,6 @@
 import React from "react";
 import { MouseEvent } from "react";
 import { ChangeEvent, useState } from "react";
-import { ProfilePage } from "../components/ProfilePage";
 import {
   Grid,
   Tab,
@@ -18,9 +17,9 @@ import {
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-
 import { NavLink } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import { ProfileComp } from "../components/ProfileComp";
 
 export default function LabTabs() {
   const [value, setValue] = React.useState("1");
@@ -39,7 +38,9 @@ export default function LabTabs() {
             <Tab label="Create a new Groups" value="3" />
           </TabList>
         </Box>
-        <TabPanel value="1"></TabPanel>
+        <TabPanel value="1">
+          <ProfileComp></ProfileComp>
+        </TabPanel>
         <TabPanel value="2"></TabPanel>
         <TabPanel value="3"></TabPanel>
       </TabContext>

@@ -3,6 +3,7 @@ import ListGroup from "./page-components-ref/ListGroup";
 import RightBar from "./components/RightBar";
 import SearchGroup from "./page-components-ref/SearchGroup";
 import { Routes, Route } from "react-router-dom";
+import { LoginComp } from "../src/components/LoginComp";
 import { Grid, Box, Toolbar, Container, Paper, Stack } from "@mui/material";
 import { FindGroup } from "./page-components/FindGroup";
 import { Profile } from "./page-components/Profile";
