@@ -35,9 +35,6 @@ export default function Navbar() {
             <NavLink to="/your-group">Your Group</NavLink>
           </a>
           <a href="" className="link">
-            <NavLink to="/notifications">Notifications</NavLink>
-          </a>
-          <a href="" className="link">
             <NavLink to="/profile">Profile</NavLink>
           </a>
         </Stack>

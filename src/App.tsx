@@ -1,23 +1,22 @@
-import Profile from "./components/Profile";
-import ListGroup from "./page-components/ListGroup";
-import FindPage from "./FindPage";
+import ProfileBox from "./components/ProfileBox";
+import ListGroup from "./page-components-ref/ListGroup";
+
 import RightBar from "./components/RightBar";
-import SearchGroup from "./page-components/SearchGroup";
+import SearchGroup from "./page-components-ref/SearchGroup";
 import { Routes, Route } from "react-router-dom";
 import { Grid, Box, Toolbar, Container, Paper, Stack } from "@mui/material";
+import { FindGroup } from "./page-components/FindGroup";
+import { Profile } from "./page-components/Profile";
+import { YourGroup } from "./page-components/YourGroup";
+import Navbar from "./components/Navbar";
+import { BrowserRouter } from "react-router-dom";
+
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/find-group" element="" />
-        <Route path="/your-group" element="" />
-        <Route path="/notifications" element="" />
-        <Route path="/profile" element="" />
-      </Routes>
-
-      <FindPage />
+      <Navbar />
       <Box
         component="main"
         sx={{
@@ -46,7 +45,14 @@ function App() {
                   flexDirection: "column",
                   height: 775,
                 }}
-              ></Paper>
+              >
+                <Routes>
+                  <Route path="/" element={<FindGroup />} />
+                  <Route path="/find-group" element={<FindGroup />} />
+                  <Route path="/your-group" element={<YourGroup />} />
+                  <Route path="/profile" element={<Profile />} />
+                </Routes>
+              </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
               <RightBar />

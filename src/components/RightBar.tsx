@@ -1,5 +1,5 @@
 import { Grid, Box, Toolbar, Container, Paper, Stack } from "@mui/material";
-import Profile from "./Profile";
+import Profile from "./ProfileBox";
 import Task from "./Task";
 
 function RightBar() {
