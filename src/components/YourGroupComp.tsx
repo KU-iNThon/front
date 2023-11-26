@@ -19,7 +19,6 @@ import { NavLink } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { YourGroupNoti } from "../components/YourGroupNoti";
 import { YourGroupPend } from "../components/YourGroupPend";
-import { YourGroupNav } from "../components/YourGroupNav";
 
 const Groups = [
   {

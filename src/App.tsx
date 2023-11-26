@@ -1,6 +1,5 @@
 import ProfileBox from "./components/ProfileBox";
 import ListGroup from "./page-components-ref/ListGroup";
-
 import RightBar from "./components/RightBar";
 import SearchGroup from "./page-components-ref/SearchGroup";
 import { Routes, Route } from "react-router-dom";
@@ -9,6 +8,7 @@ import { FindGroup } from "./page-components/FindGroup";
 import { Profile } from "./page-components/Profile";
 import { YourGroup } from "./page-components/YourGroup";
 import Navbar from "./components/Navbar";
+
 import { BrowserRouter } from "react-router-dom";
 
 import "./App.css";
