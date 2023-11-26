@@ -1,0 +1,16 @@
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.active{
+    color: #118A00 !important;
+}
